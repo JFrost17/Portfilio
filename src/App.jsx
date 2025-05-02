@@ -1,20 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { TextField, Grid } from '@mui/material'
 
-function App() {
+import React, { Suspense, useRef, useMemo } from 'react'
+import Background from './Background'
+import { Grid, TextField } from '@mui/material'
 
+export default function App() {
   return (
-    <>
-      <div>
-       <Grid container item xs={12}>
-          <TextField> https://jackimdb.netlify.app/ </TextField>
-       </Grid>
-      </div>
-    </>
+    <div style={{width:'100%', height:'100%'}}>
+      <Grid item container xs={12}>
+      <Background/>
+      </Grid>
+    </div>
   )
 }
-
-export default App
